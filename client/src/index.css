@@ -1,0 +1,102 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Philosopher:wght@700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+/* navbar */
+
+header .container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header a {
+  color: #333;
+  text-decoration: none;
+  font-family: Philosopher;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+}
+
+nav a {
+  margin-left: 15px;
+  font-family: Quicksand;
+  font-size: 1.1rem;
+}
+
+/* home */
+.site-detail {
+  width: 250px;
+  height: 250px;
+  overflow: hidden;
+  border: 1px solid #000;
+}
+
+.site-image {
+  max-width: 250px;
+  max-height: 250px;
+  object-fit: cover;
+}
+
+/* form */
+
+form button {
+  font-family: Quicksand;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  padding: 5px 6px;
+  background: rgb(42, 116, 81);
+  color: white;
+}
+
+.btn-clear{
+  background: #ddd;
+  margin-right: 10px;
+  color: #000;
+}
+
+form h2 {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+label,
+input {
+  display: block;
+  font-family: Quicksand;
+}
+
+input {
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 15px;
+  width: 100%;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+  background-color: rgb(229, 231, 231);
+}
+
+form.signup,
+form.login,
+form.create {
+  max-width: 400px;
+  margin: 40px auto;
+  padding: 10px;
+  background: #fff;
+  border-radius: 4px;
+}
+
+.signup-btn {
+  margin-right: 10px;
+}
