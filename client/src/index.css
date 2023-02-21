@@ -1,10 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Philosopher:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bitter:ital@0;1&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Sarabun&display=swap");
 
 * {
   box-sizing: border-box;
 }
 
+body {
+  margin: 0;
+}
 /* navbar */
 
 header .container {
@@ -33,6 +38,13 @@ nav a {
   font-size: 1.1rem;
 }
 
+/* hero section */
+
+.hero-section {
+  background-image: url("https://i2.wp.com/www.paradiseiswhereiam.com/wp-content/uploads/2020/02/IMG_3903-2.jpg?resize=768%2C1024&ssl=1");
+  background-size: cover;
+}
+
 /* home */
 .site-detail {
   width: 250px;
@@ -41,10 +53,34 @@ nav a {
   border: 1px solid #000;
 }
 
-.site-image {
-  max-width: 250px;
-  max-height: 250px;
-  object-fit: cover;
+/* spacing */
+/* showSite page */
+
+.show-main {
+  text-align: center;
+}
+.show-buttons {
+  font-family: Quicksand;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  padding: 5px 6px;
+  /* margin-top: 20px; */
+  margin: 0 auto;
+}
+
+.show-buttons .info {
+  background: rgb(42, 116, 81);
+  margin-right: 10px;
+  color: white;
+}
+.show-text {
+  display: inline;
+  margin-left: 70px;
+  height: 100px;
+  margin-top: 30px;
+  font-family: Bitter;
+  color: grey;
 }
 
 /* form */
@@ -57,9 +93,10 @@ form button {
   padding: 5px 6px;
   background: rgb(42, 116, 81);
   color: white;
+  margin-top: 20px;
 }
 
-.btn-clear{
+.btn-clear {
   background: #ddd;
   margin-right: 10px;
   color: #000;
@@ -71,15 +108,17 @@ form h2 {
 }
 
 label,
-input {
+input,
+textarea {
   display: block;
   font-family: Quicksand;
 }
 
-input {
-  padding: 10px;
-  margin-top: 10px;
-  margin-bottom: 15px;
+input,
+textarea {
+  padding: 5px;
+  margin-top: 7px;
+  margin-bottom: 12px;
   width: 100%;
   border: 1px solid #ddd;
   border-radius: 4px;
@@ -99,4 +138,11 @@ form.create {
 
 .signup-btn {
   margin-right: 10px;
+}
+
+.myCard {
+  background-color: aqua;
+  border: 10px solid green;
+  max-width: 100px;
+  width: 100%;
 }

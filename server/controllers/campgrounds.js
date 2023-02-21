@@ -2,9 +2,10 @@ const Campground = require("../models/campground");
 
 const allCampgrounds = async (req, res) => {
   const campgrounds = await Campground.find({});
-  res.status(200).json(campgrounds );
+  res.status(200).json(campgrounds);
 };
 
+//create a campground
 const createCampground = async (req, res) => {
   const { title, location, description, image } = req.body;
   try {
@@ -22,6 +23,7 @@ const createCampground = async (req, res) => {
   }
 };
 
+//get single campground by id
 const showCampground = async (req, res) => {
   const campground = await Campground.findById(req.params.id);
   if (!campground) {

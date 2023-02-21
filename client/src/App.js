@@ -1,8 +1,9 @@
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import About from "./pages/About";
 import CreateSite from "./pages/CreateSite";
 import Login from "./pages/Login";
+import ShowSite from "./pages/ShowSite";
 import Signup from "./pages/Signup";
 
 import Sites from "./pages/Sites";
@@ -26,6 +27,9 @@ function App() {
         </Routes>
         <Routes>
           <Route path="/signup" element={<Signup />}></Route>
+        </Routes>
+        <Routes>
+          <Route path="/:siteId" element={<ShowSite />}></Route>
         </Routes>
       </BrowserRouter>
     </div>

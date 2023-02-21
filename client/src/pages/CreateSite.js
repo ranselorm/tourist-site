@@ -1,8 +1,10 @@
-import { react, useState, useContext } from "react";
+import { useState, useContext } from "react";
+import { useNavigate } from "react-router-dom";
 import { SitesContext } from "../store/SitesContext";
 
 const CreateSite = () => {
   const { dispatch } = useContext(SitesContext);
+  const navigate = useNavigate();
 
   const [title, setTitle] = useState("");
   const [location, setLocation] = useState("");
@@ -67,13 +69,7 @@ const CreateSite = () => {
         onChange={(e) => setLocation(e.target.value)}
         value={location}
       />
-      <label htmlFor="description">Description</label>
-      <input
-        type="text"
-        name="description"
-        onChange={(e) => setDescription(e.target.value)}
-        value={description}
-      />
+
       <label htmlFor="image">Image</label>
       <input
         type="text"
@@ -81,8 +77,17 @@ const CreateSite = () => {
         onChange={(e) => setImage(e.target.value)}
         value={image}
       />
+      <label htmlFor="description">Description</label>
+      <textarea
+        cols="30"
+        rows="5"
+        name="description"
+        onChange={(e) => setDescription(e.target.value)}
+        value={description}
+      ></textarea>
+
       <div>
-        <button className="btn-clear" onClick={clearFields}>
+        <button className="btn-clear " onClick={clearFields}>
           Clear
         </button>
         <button>Create</button>
